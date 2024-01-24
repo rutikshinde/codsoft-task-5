@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TShirt Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<script src="https://kit.fontawesome.com/badcd86974.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>	
+	<script type="text/javascript" src="js/fabric.js"></script>
+	
+	
+    <!-- Le styles -->
+    <link type="text/css" rel="stylesheet" href="css/jquery.miniColors.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- <link href="../final/style.css" rel="stylesheet"> -->
+    <link href="css/style1.css" rel="stylesheet">
+    
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	 <script type="text/javascript">
+	 </script>
+	 
+  </head>
+
+  <body>
+
+  <!-- Navbar================================================== -->
+	<section id="header">
+        <a href="index.html"> <img src="img/logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar" >
+                <li><a class="active" href="index.html"> Home </a></li>
+                <li><a href="shop.html"> Shop </a></li>
+                <li><a href="customiz.html"> Customiz </a></li>
+                <li><a href="about.html"> About </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+                <li><a href="cart.html" id="shop-bag"><i class="fa-solid fa-bag-shopping"></i> </a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>   
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i  class="fa-solid fa-bars" id="bar"></i>
+        </div>
+    </section>
+
+    <div class="container">
+		<section id="typography">
+		  <div class="page-header">
+			
+		    <h1>Customiz T-Shirt</h1>
+		  </div>
+		
+		  <!-- Headings & Paragraph Copy -->
+		  <div class="row">			
+		    <div class="span3">
+		    	
+		    	<div class="tabbable"> <!-- Only required for left/right tabs -->
+				  <ul class="nav nav-tabs">
+				  	<li class="active"><a href="#tab1" data-toggle="tab"><b>T-Shirt Options</b></a></li>				    
+				    <li><a href="#tab2" data-toggle="tab"><b>CUSTOMIZE</b></a></li>
+				  </ul>
+				  <div class="tab-content">
+				     <div class="tab-pane active" id="tab1">
+				     	<div class="well">
+<!--					      	<h3>Tee Styles</h3>-->
+<!--						      <p>-->
+						      	<select id="tshirttype">                        
+				                    <option value="img/crew_front.png" selected="selected">Short Sleeve Shirts</option>
+				                    <option value="img/mens_longsleeve_front.png">Long Sleeve Shirts</option>                                        
+				                    <option value="img/mens_hoodie_front.png">Hoodies</option>                    
+				                    <option value="img/mens_tank_front.png">Tank tops</option>
+								</select>	
+<!--						      </p>-->								
+					      </div>
+					      <div class="well">
+							<ul class="nav">
+								<li class="color-preview" title="White" style="background-color:#ffffff;"></li>
+								<li class="color-preview" title="Dark Heather" style="background-color:#616161;"></li>
+								<li class="color-preview" title="Gray" style="background-color:#f0f0f0;"></li>
+								<li class="color-preview" title="Charcoal" style="background-color:#5b5b5b;"></li>
+								<li class="color-preview" title="Black" style="background-color:#222222;"></li>
+								<li class="color-preview" title="Heather Orange" style="background-color:#fc8d74;"></li>
+								<li class="color-preview" title="Heather Dark Chocolate" style="background-color:#432d26;"></li>
+								<li class="color-preview" title="Salmon" style="background-color:#eead91;"></li>
+								<li class="color-preview" title="Chesnut" style="background-color:#806355;"></li>
+								<li class="color-preview" title="Dark Chocolate" style="background-color:#382d21;"></li>
+								<li class="color-preview" title="Citrus Yellow" style="background-color:#faef93;"></li>
+								<li class="color-preview" title="Avocado" style="background-color:#aeba5e;"></li>
+								<li class="color-preview" title="Kiwi" style="background-color:#8aa140;"></li>
+								<li class="color-preview" title="Irish Green" style="background-color:#1f6522;"></li>
+								<li class="color-preview" title="Scrub Green" style="background-color:#13afa2;"></li>
+								<li class="color-preview" title="Teal Ice" style="background-color:#b8d5d7;"></li>
+								<li class="color-preview" title="Heather Sapphire" style="background-color:#15aeda;"></li>
+								<li class="color-preview" title="Sky" style="background-color:#a5def8;"></li>
+								<li class="color-preview" title="Antique Sapphire" style="background-color:#0f77c0;"></li>
+								<li class="color-preview" title="Heather Navy" style="background-color:#3469b7;"></li>							
+								<li class="color-preview" title="Cherry Red" style="background-color:#c50404;"></li>
+							</ul>
+						</div>			      
+				     </div>				   
+				    <div class="tab-pane" id="tab2">
+				    	<div class="well1">
+				    		<div class="input-append">
+							  <input class="span2" id="text-string" type="text" placeholder="add text here..."><button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
+							  <hr>
+							</div>
+							<div class="image-container">
+								<div id="avatarlist">
+								
+									<h3>HERE IS THE FEW CUSTOMIZABLE</h3>
+									<style>
+										.image-container {
+										  display: flex;
+										  overflow-x: auto;
+										  flex-direction: row;
+										}
+									  
+										.image-container img {
+										  margin-right: 10px;
+										}
+										.btn1 {
+											
+											background-color: rgb(17, 239, 235);
+											color: rgb(232, 12, 12);
+											padding: 10px;
+											margin: 5%;
+											border: none;
+											border-radius: 5px;
+											align-content: center;
+											margin-right: 10px;
+											box-sizing: border-box;
+											}
+											.btn1:hover {
+												background-color: #0fe3ff;
+											}
+
+									  </style>
+						
+									 
+									  <button class="btn1" id="toggleBtn1">MARVEL</button>
+									  <div class="image-container">	
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/panther.png" width="100px", height="100px">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/spidy.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/1.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/2.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/3.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/4.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/5.png"width="100px", height="100px" >
+									  </div>
+									  
+									  <button class="btn1" id="toggleBtn2">DC</button>
+									  <div class="image-container">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel\superman.png" width="100px", height="100px">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel\jocker.png" width="100px", height="100px">	
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/spidy.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/1dc.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/2dc.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/3dc.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/4dc.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/5dc.png"width="100px", height="100px" >								 
+									 </div>
+									  
+									  <button class="btn1" id="toggleBtn3">FOOTBALL</button>
+									  <div class="image-container">
+									
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel\messi10.png" width="100px", height="100px">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel\ronaldo07.png" width="100px", height="100px">									  
+									</div>
+									  
+									  <button class="btn1" id="toggleBtn4">BIKE</button>
+									  <div class="image-container">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel\re1.png" width="100px", height="100px">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel\re2.png" width="100px", height="100px">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/1re.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/2re.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/3re.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/4re.png"width="100px", height="100px" >
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel/5re.png"width="100px", height="100px" >
+									 </div>
+									  
+									  <button class="btn1" id="toggleBtn5">Toggle Images 5</button>
+									  <div class="image-container">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel\re2.png" width="100px" height="100px">
+										<img style="cursor:pointer;" class="img-polaroid" src="marvel\re2.png" width="100px" height="100px">
+									  </div>
+									  
+									  <script>
+
+									
+
+
+										const toggleBtn1 = document.getElementById("toggleBtn1");
+										const imageContainer1 = document.querySelector(".image-container:nth-of-type(1)");
+										let imagesVisible1 = false;
+										toggleBtn1.addEventListener("click", () => {
+										  if (imagesVisible1) {
+											// Hide the images
+											const images = imageContainer1.querySelectorAll("img");
+											images.forEach((img) => {
+											  img.style.display = "none";
+											});
+										  } else {
+											// Show the images
+											const images = imageContainer1.querySelectorAll("img");
+											images.forEach((img) => {
+											  img.style.display = "inline-block";
+											});
+										  }
+										  imagesVisible1 = !imagesVisible1;
+										});
+									  
+										const toggleBtn2 = document.getElementById("toggleBtn2");
+										const imageContainer2 = document.querySelector(".image-container:nth-of-type(2)");
+										let imagesVisible2 = false;
+										toggleBtn2.addEventListener("click", () => {
+										  if (imagesVisible2) {
+											// Hide the images
+											const images = imageContainer2.querySelectorAll("img");
+											images.forEach((img) => {
+											  img.style.display = "none";
+											});
+										  } else {
+											// Show the images
+											const images = imageContainer2.querySelectorAll("img");
+											images.forEach((img) => {
+											  img.style.display = "inline-block";
+											});
+										  }
+										  imagesVisible2 = !imagesVisible2;
+										});
+									  
+										const toggleBtn3 = document.getElementById("toggleBtn3");
+										const imageContainer3 = document.querySelector(".image-container:nth-of-type(3)");
+										let imagesVisible3 = false;
+										toggleBtn3.addEventListener("click", () => {
+										  if (imagesVisible3) {
+											// Hide the images
+											const images = imageContainer3.querySelectorAll("img");
+											images.forEach((img) => {
+											  img.style.display = "none";
+											});
+										  } else {
+											// Show the images
+											const images = imageContainer3.querySelectorAll("img");
+											images.forEach((img) => {
+											  img.style.display = "inline-block";
+											});
+										  }
+										  imagesVisible3 = !imagesVisible3;
+										});
+												
+											
+											
+											const toggleBtn4 = document.getElementById("toggleBtn4");
+											const imageContainer4 = document.querySelector(".image-container:nth-of-type(4)");
+											let imagesVisible4 = false;
+											toggleBtn4.addEventListener("click", () => {
+												if (imagesVisible4) {
+												// Hide the images
+												const images = imageContainer4.querySelectorAll("img");
+												images.forEach((img) => {
+													img.style.display = "none";
+												});
+												} else {
+												// Show the images
+												const images = imageContainer4.querySelectorAll("img");
+												images.forEach((img) => {
+													img.style.display = "inline-block";
+												});
+												}
+												imagesVisible4 = !imagesVisible4;
+											});
+
+											const toggleBtn5 = document.getElementById("toggleBtn5");
+											const imageContainer5 = document.querySelector(".image-container:nth-of-type(5)");
+											let imagesVisible5 = false;
+											toggleBtn5.addEventListener("click", () => {
+												if (imagesVisible5) {
+												// Hide the images
+												const images = imageContainer5.querySelectorAll("img");
+												images.forEach((img) => {
+													img.style.display = "none";
+												});
+												} else {
+												// Show the images
+												const images = imageContainer5.querySelectorAll("img");
+												images.forEach((img) => {
+													img.style.display = "inline-block";
+												});
+												}
+												imagesVisible5 = !imagesVisible5;
+											});
+												</script>								
+
+
+								  
+
+							
+								<!-- <img style="cursor:pointer;" class="img-polaroid" src="img/invisibleman.jpg">
+								<img style="cursor:pointer;" class="img-polaroid" src="img/invisibleman.jpg"> -->
+								
+								
+								<!-- <img style="cursor:pointer;" class="img-polaroid" src="img/invisibleman.jpg">
+								<img style="cursor:pointer;" class="img-polaroid" src="img/invisibleman.jpg"> -->
+							
+					
+								<!-- <img style="cursor:pointer;" class="img-polaroid" src="img/invisibleman.jpg"> -->
+							
+								
+								
+
+								</div>	
+								
+						</div>
+                            <div>
+                                <hr>
+								
+								
+							     <!-- <form action="upload.php" method="post" enctype="multipart/form-data">
+                                     <input type="file" name="fileToUpload" id="fileToUpload">
+                                     <input class="btn btn-primary" type="submit" value="Upload Custom Image" name="submit">
+                                </form> -->
+								<input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+									<p><label for="file" style="cursor: pointer;"> <u>UPLOAD CUSTOMIZE PIC</u></label></p>
+									<div id="drawingArea">
+										<img id="output" width="200" />
+									</div>
+
+									<script>
+								var loadFile = function(event) {
+								var image = new Image();
+								image.onload = function() {
+									var canvas = document.getElementById('tcanvas');
+									var context = canvas.getContext('2d');
+									context.drawImage(image, 0, 0, canvas.width, canvas.height);
+								};
+								image.src = URL.createObjectURL(event.target.files[0]);
+								var drawingArea = document.getElementById('drawingArea');
+								drawingArea.style.display = 'block'; // Show the drawing area if hidden
+								var canvasArea = document.getElementById('canvasArea');
+								canvasArea.style.display = 'block'; // Show the canvas area if hidden
+							};
+								</script>
+							</div>
+                            
+				    	</div>				      
+				    </div>
+				  </div>
+				</div>				
+		    </div>		
+		    <div class="span6">		    
+		    		<div align="center" style="min-height: 32px;">
+		    			<div class="clearfix">
+							<div class="btn-group inline pull-left" id="texteditor" style="display:none">						  
+								<button id="font-family" class="btn dropdown-toggle" data-toggle="dropdown" title="Font Style"><i class="icon-font" style="width:19px;height:19px;"></i></button>		                      
+							    <ul class="dropdown-menu" role="menu" aria-labelledby="font-family-X">
+								    <li><a tabindex="-1" href="#" onclick="setFont('Arial');" class="Arial">Arial</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Helvetica');" class="Helvetica">Helvetica</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Myriad Pro');" class="MyriadPro">Myriad Pro</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Delicious');" class="Delicious">Delicious</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Verdana');" class="Verdana">Verdana</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Georgia');" class="Georgia">Georgia</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Courier');" class="Courier">Courier</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Comic Sans MS');" class="ComicSansMS">Comic Sans MS</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Impact');" class="Impact">Impact</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Monaco');" class="Monaco">Monaco</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Optima');" class="Optima">Optima</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Hoefler Text');" class="Hoefler Text">Hoefler Text</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Plaster');" class="Plaster">Plaster</a></li>
+								    <li><a tabindex="-1" href="#" onclick="setFont('Engagement');" class="Engagement">Engagement</a></li>
+				                </ul>
+							    <button id="text-bold" class="btn" data-original-title="Bold"><img src="img/font_bold.png" height="" width=""></button>
+							    <button id="text-italic" class="btn" data-original-title="Italic"><img src="img/font_italic.png" height="" width=""></button>
+							    <button id="text-strike" class="btn" title="Strike" style=""><img src="img/font_strikethrough.png" height="" width=""></button>
+							 	<button id="text-underline" class="btn" title="Underline" style=""><img src="img/font_underline.png"></button>
+							 	<a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Color"><input type="hidden" id="text-fontcolor" class="color-picker" size="7" value="#000000"></a>
+						 		<a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Border Color"><input type="hidden" id="text-strokecolor" class="color-picker" size="7" value="#000000"></a>
+								  <!--- Background <input type="hidden" id="text-bgcolor" class="color-picker" size="7" value="#ffffff"> --->
+							</div>							  
+							<div class="pull-right" align="" id="imageeditor" style="display:none">
+							  <div class="btn-group">										      
+							      <button class="btn" id="bring-to-front" title="Bring to Front"><i class="icon-fast-backward rotate" style="height:19px;"></i></button>
+							      <button class="btn" id="send-to-back" title="Send to Back"><i class="icon-fast-forward rotate" style="height:19px;"></i></button>
+							      <button id="flip" type="button" class="btn" title="Show Back View"><i class="icon-retweet" style="height:19px;"></i></button>
+							      <button id="remove-selected" class="btn" title="Delete selected item"><i class="icon-trash" style="height:19px;"></i></button>
+							  </div>
+							</div>			  
+						</div>												
+					</div>					  		
+				<!--	EDITOR      -->	
+				
+                <button id="flipback" type="button" class="btn" title="Rotate View"><i class="icon-retweet" style="height:19px;"></i></button>
+					<div id="shirtDiv" class="page" style="position: relative; background-color: rgb(209, 239, 12);">
+						<img name="tshirtview" id="tshirtFacing" src="img/crew_front.png" style="width: 100%;">
+						<div id="drawingArea" style="position: absolute;top: 100px; left: 160px;z-index: 10;">					
+							<canvas id="tcanvas" width=220px height=400 class="hover" style="-webkit-user-select: none;"></canvas>
+						</div>
+					</div>
+		    </div>
+
+			<div class="span3">
+		      <div class="well">
+		      	<h3>Select Sizes</h3>
+			      <p>
+			      	<table class="table">
+			      		<tr>
+			      			<td><input type="checkbox">&emsp;S</td>
+			      			<td align="right"><input min="0" style="width: 40px;" value="1" type="number"></td>
+			      		</tr>
+			      		<tr>
+			      			<td><input type="checkbox">&emsp;M</td>
+			      			<td align="right"><input min="0" style="width: 40px;" placeholder="1" type="number"></td>
+			      		</tr>
+			      		<tr>
+			      			<td><input type="checkbox">&emsp;L</td>
+			      			<td align="right"><input min="0" style="width: 40px;"  placeholder="1" type="number"></td>
+			      		</tr>
+			      		<tr>
+			      			<td><input type="checkbox">&emsp;XL</td>
+			      			<td align="right"><input min="0" style="width: 40px;"  placeholder="1" type="number"></td>
+			      		</tr>
+                        <tr>
+			      			<td><input type="checkbox">&emsp;XXL</td>
+			      			<td align="right"><input min="0" style="width: 40px;"  placeholder="1" type="number"></td>
+			      		</tr>
+			      	</table>			
+			      </p>
+					<button type="button" class="btn btn-large btn-block btn-success" name="addToTheBag" id="addToTheBag">Add to bag <i class="icon-briefcase icon-white"></i></button>
+		      </div>		      		       		   
+		    </div>
+		
+		  </div>
+		  <section id="product" class="section-p1">
+			<h2>Featured Products</h2>
+			<p>Summer Collection New Morden Design</p>
+			<div class="pro-container">
+				<div class="pro" onclick="window.location.href='sproduct.html';">
+					<img src="marvel/ss1.png" alt="">
+					<div class="des">
+						<span>adidas</span>
+						<h5>Cartoon astronaut t-shirt</h5>
+						<div class="star">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h4>₹2500</h4>
+					</div>
+					<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+				</div>
+	
+				<div class="pro">
+					<img src="marvel/ss2.png" alt="">
+					<div class="des">
+						<span>adidas</span>
+						<h5>Cartoon astronaut t-shirt</h5>
+						<div class="star">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h4>₹2500</h4>
+					</div>
+					<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+				</div>
+	
+				<div class="pro">
+					<img src="marvel/ss3.png" alt="">
+					<div class="des">
+						<span>adidas</span>
+						<h5>Cartoon astronaut t-shirt</h5>
+						<div class="star">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h4>₹2500</h4>
+					</div>
+					<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+				</div>
+	
+				<div class="pro">
+					<img src="marvel/ss6.png" alt="">
+					<div class="des">
+						<span>adidas</span>
+						<h5>Cartoon astronaut t-shirt</h5>
+						<div class="star">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h4>₹2500</h4>
+					</div>
+					<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+				</div>
+	
+				<div class="pro">
+					<img src="marvel/ss4.png" alt="">
+					<div class="des">
+						<span>adidas</span>
+						<h5>Cartoon astronaut t-shirt</h5>
+						<div class="star">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h4>₹2500</h4>
+					</div>
+					<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+				</div>
+	
+				<div class="pro">
+					<img src="marvel/ss5.png" alt="">
+					<div class="des">
+						<span>adidas</span>
+						<h5>Cartoon astronaut t-shirt</h5>
+						<div class="star">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h4>₹2500</h4>
+					</div>
+					<a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+				</div>
+	
+				
+				
+			</div>
+		 </section>
+		 
+	   
+		</section>
+    </div><!-- /container -->
+    
+<!-- Footer ================================================== -->
+    <script>
+        $(document).ready(function(){
+   $("#tshirttype").change(function(){
+     $("img[name=tshirtview]").attr("src",$(this).val());
+
+   });
+
+});
+    </script>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster --> 
+    <script>
+        var valueSelect = $("#tshirttype").val();
+        $("#tshirttype").change(function(){
+            valueSelect = $(this).val();
+        });
+        $('#flipback').click(
+		   function() {	
+               if (valueSelect === "img/crew_front.png") {
+                   if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/crew_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/crew_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }		
+               }
+               
+               else if (valueSelect === "img/mens_longsleeve_front.png") {
+                  if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/mens_longsleeve_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/mens_longsleeve_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }	
+               }
+               else if (valueSelect === "img/mens_tank_front.png") {
+                  if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/mens_tank_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/mens_tank_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }	
+               }
+               else if (valueSelect === "img/mens_hoodie_front.png") {
+                  if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/mens_hoodie_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/mens_hoodie_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }	
+               }
+			   /*	if ($(this).attr("data-original-title") == "Show Back View") {
+			   		$(this).attr('data-original-title', 'Show Front View');			        		       
+			        $("#tshirtFacing").attr("src","img/crew_back.png");			        
+			        a = JSON.stringify(canvas);
+			        canvas.clear();
+			        try
+			        {
+			           var json = JSON.parse(b);
+			           canvas.loadFromJSON(b);
+			        }
+			        catch(e)
+			        {}
+			        
+			    } else {
+			    	$(this).attr('data-original-title', 'Show Back View');			    				    	
+			    	$("#tshirtFacing").attr("src","img/crew_front.png");			    	
+			    	b = JSON.stringify(canvas);
+			    	canvas.clear();
+			    	try
+			        {
+			           var json = JSON.parse(a);
+			           canvas.loadFromJSON(a);			           
+			        }
+			        catch(e)
+			        {}
+			    }		*/
+			   	canvas.renderAll();
+			   	setTimeout(function() {
+			   		canvas.calcOffset();
+			    },200);	   	
+        });	
+    </script>
+    <script src="js/bootstrap.min.js"></script>  
+<script type="text/javascript" src="js/tshirtEditor.js"></script>
+	<script type="text/javascript" src="js/jquery.miniColors.min.js"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35639689-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="script.js"></script>
+  </body>
+</html>

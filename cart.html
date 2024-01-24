@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/badcd86974.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous"/>
+    
+    <title>Ecommerce</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <section id="header">
+        <a href="index.html"> <img src="img/logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar" >
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="shop.html"> Shop </a></li>
+                <li><a href="customiz.html"> Customiz </a></li>
+
+                
+                <li><a href="about.html"> About </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+                <li><a class="active" href="cart.html" id="shop-bag"><i class="fa-solid fa-bag-shopping"></i> </a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>   
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i  class="fa-solid fa-bars" id="bar"></i>
+        </div>
+    </section>
+
+    <!-- Hero section -->
+     <section id="page-header" class="about-header">
+        <h2>#Shopping Cart</h2>
+        <p></p>
+     </section>
+
+     <section class="container content-section">
+        <h2 class="section-header" style="text-align: center;">CART</h2>
+        <div class="cart-row" >
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button"><a href="payment.html">PLACE ORDER</a></button>
+    </section>
+    
+
+     <!-- Footer -->
+     <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> PVPIT Pune , Maharashtra </p>
+            <p><strong>Phone: </strong> +91-9075447872/ +91-8208378610?/ +917263884418 </p>
+            <p><strong>Hours: </strong> 08:00 - 08:00, Mon - Sat </p>
+
+            <div class="follow">
+                <h4>Foolow Us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#"> About us</a>
+            <a href="#"> Delievery Informaion</a>
+            <a href="#"> Privacy Policy</a>
+            <a href="#"> Terms & Conditions</a>
+            <a href="#"> Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#"> Sign In</a>
+            <a href="#"> View Cart</a>
+            <a href="#"> Track My Order</a>
+            <a href="#"> Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Pay</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+     </footer>
+     <div class="copyright">
+        <p>&copy GR8 MINDS</p>
+    </div>
+
+    <!-- <div class="spacer" style="height: 150vh;"></div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
